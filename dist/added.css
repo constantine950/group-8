@@ -1,0 +1,43 @@
+.color-box {
+  /* width: 200px;
+    height: 200px; */
+  background-color: #b047ed;
+  transition: background-color 0.3s ease;
+}
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+.content {
+  flex: 1;
+}
+
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #333;
+  border-top: 1px solid #e9ecef;
+}
+footer span {
+  color: #6b46c1;
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down {
+  animation: slideDown 1s ease-out forwards;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./added.css" />
+    <title>AnonChatApp</title>
+  </head>
+  <body>
+    <div class="bg-purple-500 min-h-screen pb-20">
+      <div class="flex justify-center container">
+        <div class="w-[350px] bg-white mx-10 mt-12 rounded-lg py-14 shadow-lg">
+          <h1
+            class="text-3xl text-center font-light text-purple-700 fade show"
+            id="animatedTitle"
+          >
+            Share your opinions
+          </h1>
+          <div class="text-center pt-16 text-purple-700">
+            <h2 class="text-xl font-semibold">Welcome Back!</h2>
+            <div class="flex justify-center container mx-auto mt- 20">
+              <div class="w-[390px] px-10 py-7">
+                <p class="text-sm text-center pt-3 slide-down">
+                  A safe and anonymous platform where your opinions matter.
+                  Here, you can share your thoughts freely, connect with fellow
+                  students, and engage in meaningful discussions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center pt-24">
+            <a href="./signup.html"
+              ><div class="bg-purple-500 mx-7 py-3 rounded-full text-white">
+                Sign up
+              </div></a
+            >
+            <a href="./signin.html"
+              ><div
+                class="bg-purple-500 mx-7 mt-5 py-3 rounded-full text-white"
+              >
+                Sign In
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const titles = [
+        "Share your opinions",
+        "Voice your thoughts",
+        "Express yourself",
+        "Your ideas matter",
+        "Join the conversation",
+      ];
+
+      let index = 0;
+      const titleElement = document.getElementById("animatedTitle");
+
+      function changeTitle() {
+        titleElement.classList.remove("show");
+        setTimeout(() => {
+          titleElement.textContent = titles[index];
+          titleElement.classList.add("show");
+          index = (index + 1) % titles.length;
+        }, 1000); // Delay matches the transition time for a smooth fade
+      }
+
+      setInterval(changeTitle, 3000); // Change title every 3 seconds
+    </script>
+    <footer>
+      <p>Built with <span>❤</span> by the Group 8 team</p>
+    </footer>
+  </body>
+</html>
