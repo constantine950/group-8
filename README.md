@@ -1,4 +1,4 @@
-This project is built with HTML, Tailwindcss and Vanilla JavaScript.
+This project is built with HTML, Tailwindcss, Firebase and Vanilla JavaScript along with webpack
 
 To Get Started
 
